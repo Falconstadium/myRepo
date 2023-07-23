@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+  --ff-ubuntu: 'Ubuntu', sans-serif;
+  --ff-roboto: 'Roboto', sans-serif;
+  --clr-slate900: #0f172a;
+  --clr-sky500: #0ea5e9;
+  --clr-sky700: #0369a1;
+  --clr-violet: #312e81;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-roboto);
+}
+
+header{
+  background-color: var(--clr-slate900);
+  color: #fff;
+  height: 3.725rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem 1rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+}
+
+.pic{
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  margin: auto 2rem;
+}
+
+h1{
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.infos p{
+  letter-spacing: 0.2;
+  line-height: 1.4;
+}
+
+#generate-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+#generate-form input{
+  height: 3rem;
+}
+::placeholder{
+  font-weight: 100;
+  font-size: 1rem;
+  padding-left: .5rem;
+}
+
+#generate-form select{
+  height: 3rem;
+  padding-left: .5rem;
+  font-size: 1rem;
+}
+
+.submit{
+  background-color: var(--clr-violet);
+  border: none;
+  color: #fff;
+  height: 3rem;
+  border-radius: .225rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.submit:hover{
+  background-color: #4338ca;
+  transition: 0.3s;
+}
+
+#spinner {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid var(--clr-sky700); /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 1rem auto;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.generated{
+  margin: 2rem auto;
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row;
+  }
+  .hero{
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  .pic{
+    width: 17rem;
+    height: 17rem;
+
+  }
+  header{
+    padding: 1rem 7rem;
+  }
+}
