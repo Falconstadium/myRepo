@@ -21,7 +21,7 @@ const onGenerateSubmit = (e) => {
       generateQRCode(url, size);
 
       setTimeout(() => {
-        const saveUrl = qr.querySelector('img').src;
+        const saveUrl = qrcode.querySelector('img').src;
         createSaveBtn(saveUrl);
       }, 50);
 
@@ -56,12 +56,9 @@ const clearUI = () => {
 const createSaveBtn = (saveUrl) => {
   const link = document.createElement('a');
   link.id = 'save-link';
-  link.style.backgroundColor = 'red';
-  link.style.color = 'white';
-  link.style.margin = 'auto';
+  link.innerHTML = 'Save Image';
   link.href = saveUrl;
   link.download = 'qrcode';
-  link.innerHTML = 'Save Image';
   document.getElementById('generated').appendChild(link);
 }
 

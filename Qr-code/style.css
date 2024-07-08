@@ -1,49 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-:root{
-  --ff-ubuntu: 'Ubuntu', sans-serif;
+:root {
   --ff-roboto: 'Roboto', sans-serif;
-  --clr-slate900: #0f172a;
-  --clr-sky500: #0ea5e9;
-  --clr-sky700: #0369a1;
-  --clr-violet: #312e81;
+  --clr-light: #f5f5f5;
+  --clr-dark: #121212;
+  --clr-blue: #30475e;
+  --clr-rose: #f05454;
+  --clr-rose-hover: #f31919;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: var(--ff-roboto);
 }
 
-header{
-  background-color: var(--clr-slate900);
-  color: #fff;
+header {
+  background-color: var(--clr-blue);
+  color: var(--clr-light);
   height: 3.725rem;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1rem 1rem;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   gap: 2em;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  height: 100%;
+  margin: 3rem auto;
+  min-height: 100vh;
 }
 
-.pic{
+.pic {
   width: 14rem;
   height: 14rem;
   border-radius: 50%;
   margin-top: 2rem;
 }
 
-.hero{
+.hero {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -52,60 +51,61 @@ header{
   margin: auto 2rem;
 }
 
-h1{
+h1 {
   font-size: 2rem;
   font-weight: 700;
   margin: 0 auto;
 }
 
-.infos{
+.infos {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
-.infos p{
+.infos p {
   letter-spacing: 0.2;
   line-height: 1.4;
 }
 
-#generate-form{
+#generate-form {
   display: flex;
   flex-direction: column;
   gap: 1em;
   width: 100%;
 }
-#generate-form input{
+#generate-form input {
   height: 3rem;
+  padding: 0 0.5rem;
 }
-::placeholder{
+::placeholder {
   font-weight: 100;
   font-size: 1rem;
-  padding-left: .5rem;
 }
 
-#generate-form select{
+#generate-form select {
   height: 3rem;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   font-size: 1rem;
 }
 
-.submit{
-  background-color: var(--clr-violet);
+.submit {
+  background-color: var(--clr-rose);
   border: none;
-  color: #fff;
+  color: var(--clr-light);
   height: 3rem;
-  border-radius: .225rem;
+  border-radius: 0.225rem;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
 }
-.submit:hover{
-  background-color: #4338ca;
-  transition: 0.3s;
+.submit:hover {
+  background-color: var(--clr-rose-hover);
 }
 
 #spinner {
-  border: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid var(--clr-sky700); /* Blue */
+  border: 6px solid var(--clr-light); /* Light grey */
+  border-top: 6px solid var(--clr-dark); /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -115,32 +115,85 @@ h1{
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.generated{
-  margin: 2rem auto;
+#save-link {
+  background-color: var(--clr-rose);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  margin: 1rem auto;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+#save-link:hover {
+  background-color: var(--clr-rose-hover);
 }
 
-@media (min-width: 1024px){
-  .container{
+#generated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/*footer*/
+.footer {
+  background-color: var(--clr-blue);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  user-select: none;
+  margin-top: 4rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.social-links a {
+  color: var(--clr-light);
+  transition: all 0.3s ease-in-out;
+}
+.social-links a:hover {
+  color: var(--clr-rose);
+  scale: 1.1;
+}
+
+@media (min-width: 1024px) {
+  .container {
     max-width: 1024px;
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
   }
-  .hero{
+  .hero {
     gap: 1em;
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
+    position: sticky;
   }
-  .pic{
+  .pic {
     width: 17rem;
     height: 17rem;
-
   }
-  header{
+  header {
     padding: 1rem 7rem;
   }
 }
