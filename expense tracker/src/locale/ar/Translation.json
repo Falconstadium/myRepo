@@ -1,0 +1,22 @@
+{
+  "hero":{
+    "title": "متتبع النفقات",
+    "balance": "توازن",
+    "income": "دخل",
+    "expense": "تكلفة"
+  },
+
+  "form":{
+    "new": "أضف معاملة جديدة",
+    "add": "أضف معاملة ",
+    "text": "نص",
+    "amount": "مبلغ",
+    "textLabel": "أدخل نص...",
+    "negative": "سالب",
+    "positive": "موجب"
+  },
+
+  "history":{
+    "title": "تاريخ"
+  }
+}

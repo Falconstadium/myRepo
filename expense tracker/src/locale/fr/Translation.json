@@ -1,0 +1,22 @@
+{
+  "hero":{
+    "title": "suivi des dépenses",
+    "balance": "votre balance",
+    "income": "revenu",
+    "expense": "frais"
+  },
+
+  "form":{
+    "new": "Ajouter une nouvelle transaction",
+    "add": "Ajouter une transaction",
+    "text": "Texte",
+    "amount": "Montant",
+    "textLabel": "Entrer un text...",
+    "negative": "négatif",
+    "positive": "positif"
+  },
+
+  "history":{
+    "title": "Historique"
+  }
+}

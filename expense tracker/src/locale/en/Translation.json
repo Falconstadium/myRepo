@@ -1,0 +1,22 @@
+{
+  "hero":{
+    "title": "Expense Tracker",
+    "balance": "Your balance",
+    "income": "income",
+    "expense": "expense"
+  },
+  
+  "form":{
+    "new": "Add new Transaction",
+    "add": "Add Transaction",
+    "text": "Text",
+    "amount": "Amount",
+    "textLabel": "Enter text...",
+    "negative": "negative",
+    "positive": "positive"
+  },
+
+  "history":{
+    "title": "History"
+  }
+}
