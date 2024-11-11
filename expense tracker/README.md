@@ -1,1 +1,1 @@
-Live Demo: https://fundstrack.netlify.app/
+Live Demo: [fundstruck](https://fundstruck.netlify.app/)
