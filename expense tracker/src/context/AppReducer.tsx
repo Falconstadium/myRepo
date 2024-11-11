@@ -1,10 +1,24 @@
-export default (state: any, action: any) => {
+interface Transaction {
+  id: string;
+  amount: number;
+}
+
+interface State {
+  transactions: Transaction[];
+}
+
+interface Action {
+  type: 'DELETE_TRANSACTION' | 'ADD_TRANSACTION';
+  payload: any;
+}
+
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'DELETE_TRANSACTION':
       return {
         ...state,
         transactions: state.transactions.filter(
-          (transaction: any) => transaction.id !== action.payload
+          (transaction) => transaction.id !== action.payload
         ),
       };
     case 'ADD_TRANSACTION':
@@ -16,3 +30,5 @@ export default (state: any, action: any) => {
       return state;
   }
 };
+
+export default reducer;
